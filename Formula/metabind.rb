@@ -1,28 +1,28 @@
 class Metabind < Formula
   desc "Metabind CLI — headless CMS management from the command line"
   homepage "https://github.com/yapstudios/metabind-cli"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.2.1/mb-darwin-arm64.tar.gz"
-      sha256 "96473fdcaf72f5840a3b111dd1f1fab17a6a35020e33b4cf9861fc04651787f0"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.3.0/mb-darwin-arm64.tar.gz"
+      sha256 "e1619211f7cd295ae795585940b5bf81584568adda0ece4b5fe2cbd34b0e7467"
     else
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.2.1/mb-darwin-x64.tar.gz"
-      sha256 "5dfd11f6b6b4ed8a69e3609511a171c4c8fcba045bd38a0b3008c5d32dba9c14"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.3.0/mb-darwin-x64.tar.gz"
+      sha256 "d56f2bc9e6d799a181766f1e9ab7085076d6043c348a3a43526608d20eb840bc"
     end
   end
 
   def install
     if Hardware::CPU.arm?
-      bin.install "mb-darwin-arm64" => "mb"
+      bin.install "mb-darwin-arm64" => "metabind"
     else
-      bin.install "mb-darwin-x64" => "mb"
+      bin.install "mb-darwin-x64" => "metabind"
     end
   end
 
   test do
-    assert_match "0.2.1", shell_output("#{bin}/mb --version")
+    assert_match "0.3.0", shell_output("#{bin}/metabind --version")
   end
 end
