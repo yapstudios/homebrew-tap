@@ -1,16 +1,16 @@
 class Metabind < Formula
   desc "Metabind CLI — headless CMS management from the command line"
   homepage "https://github.com/yapstudios/metabind-cli"
-  version "0.4.3"
+  version "0.4.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.4.3/mb-darwin-arm64.tar.gz"
-      sha256 "ae798c18df3af55191ec8d247c826070d23f66443e10c37d5eaea4129712237a"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.4.4/mb-darwin-arm64.tar.gz"
+      sha256 "6d9c5cc5040421b5f55410e2b45aa0d43642d495ace43d6bf818ce739950c6a5"
     else
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.4.3/mb-darwin-x64.tar.gz"
-      sha256 "3d80e8b5ded7dc6a5b0cc61261aec1f6ca14ae5daa6e389a20317a4c21b15dd9"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.4.4/mb-darwin-x64.tar.gz"
+      sha256 "ff6e2daefeb001e0b00e8c696e2a67d30290509c1d64f73580062ade53ce9244"
     end
   end
 
@@ -23,6 +23,6 @@ class Metabind < Formula
   end
 
   test do
-    assert_match "0.4.3", shell_output("#{bin}/metabind --version")
+    assert_match "0.4.4", shell_output("#{bin}/metabind --version")
   end
 end
