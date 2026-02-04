@@ -1,8 +1,8 @@
 class Xcodecloud < Formula
   desc "Command-line interface for Xcode Cloud via App Store Connect API"
   homepage "https://github.com/yapstudios/xcodecloud-cli"
-  url "https://github.com/yapstudios/xcodecloud-cli/archive/refs/tags/1.0.8.tar.gz"
-  sha256 "472ce05f244262aae2e167be6807ac2dc1a581ff2a3575d044e547ebb0e83777"
+  url "https://github.com/yapstudios/xcodecloud-cli/archive/refs/tags/1.0.9.tar.gz"
+  sha256 "fa774f2049f21a65f826e6df77fc3a3ee5e817e2cf87dcc524b7dc6da7605c72"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
