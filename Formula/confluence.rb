@@ -7,10 +7,10 @@ class Confluence < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/yapstudios/homebrew-tap/releases/download/confluence-v0.1.0/confluence-darwin-arm64.tar.gz"
-      sha256 "710d82ca6b9c53a66127017c05fe768f5a86923c32eddcb544d3da21ad25b99a"
+      sha256 "22d834b3bef3a358328394a3b56a7a71e44bb2cd43c60f1d61c9a4fd08255a4e"
     else
       url "https://github.com/yapstudios/homebrew-tap/releases/download/confluence-v0.1.0/confluence-darwin-x64.tar.gz"
-      sha256 "ba5fb0561edf8043c24cea06ddeb37ac0bb47930f436e3ff896572814b739861"
+      sha256 "a9e910a3d4864e7592038f52ccd809eced0f7c9e77a1ec5d48a2b3d37a4d74d7"
     end
   end
 
