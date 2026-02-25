@@ -1,8 +1,8 @@
 class ZeplinCli < Formula
   desc "Command-line interface for the Zeplin API"
   homepage "https://github.com/yapstudios/zeplin-cli"
-  url "https://github.com/yapstudios/zeplin-cli/archive/refs/tags/0.2.0.tar.gz"
-  sha256 "1eb159b67f448fa5bc4f3a7cdab09c2b494e0457e18715da7a22cccc10e534bc"
+  url "https://github.com/yapstudios/zeplin-cli/archive/refs/tags/0.2.1.tar.gz"
+  sha256 "0d455cc9027b87359eb9f93b261f77ec81d07832c6d9115f88fd6474ed451043"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
