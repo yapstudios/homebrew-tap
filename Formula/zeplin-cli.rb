@@ -1,8 +1,8 @@
-class Zeplin < Formula
+class ZeplinCli < Formula
   desc "Command-line interface for the Zeplin API"
   homepage "https://github.com/yapstudios/zeplin-cli"
   url "https://github.com/yapstudios/zeplin-cli/archive/refs/tags/0.2.0.tar.gz"
-  sha256 "f02ad587fac645d4271847bec5d63414c8ad3662833e35dec712146781afc81e"
+  sha256 "1eb159b67f448fa5bc4f3a7cdab09c2b494e0457e18715da7a22cccc10e534bc"
   license "MIT"
 
   depends_on xcode: ["16.0", :build]
@@ -10,11 +10,11 @@ class Zeplin < Formula
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/zeplin"
-    generate_completions_from_executable(bin/"zeplin", "--generate-completion-script")
+    bin.install ".build/release/zeplin-cli"
+    generate_completions_from_executable(bin/"zeplin-cli", "--generate-completion-script")
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/zeplin --version")
+    assert_match version.to_s, shell_output("#{bin}/zeplin-cli --version")
   end
 end
