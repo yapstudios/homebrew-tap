@@ -1,16 +1,15 @@
 class Xcodecloud < Formula
   desc "Command-line interface for Xcode Cloud via App Store Connect API"
   homepage "https://github.com/yapstudios/xcodecloud-cli"
-  url "https://github.com/yapstudios/xcodecloud-cli/archive/refs/tags/1.2.3.tar.gz"
-  sha256 "2176990bbc124809fffb31e0e576c8fb2fbf85b359016aa1f1f6ac1bd8c82cee"
+  url "https://github.com/yapstudios/xcodecloud-cli/releases/download/1.2.4/xcodecloud-macos-universal.tar.gz"
+  sha256 "823940923d02ea7d0c6d0152d19d0339cd19dfbadecb328eeef4599ec2df3c67"
+  version "1.2.4"
   license "MIT"
 
-  depends_on xcode: ["16.0", :build]
   depends_on macos: :monterey
 
   def install
-    system "swift", "build", "-c", "release", "--disable-sandbox"
-    bin.install ".build/release/xcodecloud"
+    bin.install "xcodecloud"
     generate_completions_from_executable(bin/"xcodecloud", "--generate-completion-script")
   end
 
