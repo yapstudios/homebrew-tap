@@ -1,8 +1,8 @@
 class Sfsym < Formula
   desc "Export Apple SF Symbols as SVG"
   homepage "https://github.com/yapstudios/sfsym"
-  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "01f57095f0233c6a9dc70a426feddbd0fbe06387c4a1b8c7784745b11cb474f1"
+  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "f69576b832f47753d018a80f1314382ced1cef2a20c73151e14421e428ef7dbe"
   license "MIT"
 
   depends_on :macos
