@@ -1,22 +1,20 @@
 class Sfsym < Formula
-  desc "Export Apple SF Symbols as SVG"
+  desc "Export Apple SF Symbols as vector SVG, vector PDF, or PNG"
   homepage "https://github.com/yapstudios/sfsym"
-  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.1.6.tar.gz"
-  sha256 "b74b0992239002f4b6003664e8d93d6a63ad3220aa9bd4c8729d5d26fcf1545b"
+  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "1295f14f3f680e8037015d978b0e7e598a37680be94a0d90142e4079fa4c848e"
   license "MIT"
 
+  depends_on xcode: ["15.0", :build]
   depends_on :macos
-  depends_on "python@3.12"
 
   def install
-    # Rewrite the shebang to point at the Homebrew Python so sfsym runs under
-    # a guaranteed ≥3.11 interpreter regardless of the user's env.
-    inreplace "sfsym", %r{^#!/usr/bin/env python3$}, "#!#{Formula["python@3.12"].opt_bin}/python3.12"
-    bin.install "sfsym"
+    system "swift", "build", "-c", "release", "--disable-sandbox"
+    bin.install ".build/release/sfsym"
   end
 
   test do
-    assert_match "sfsym", shell_output("#{bin}/sfsym --help 2>&1", 0)
-    assert_match "search", shell_output("#{bin}/sfsym schema --json 2>&1", 0)
+    assert_match "sfsym #{version}", shell_output("#{bin}/sfsym --version")
+    assert_match "export", shell_output("#{bin}/sfsym schema")
   end
 end
