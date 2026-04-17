@@ -1,8 +1,8 @@
 class Sfsym < Formula
   desc "Export Apple SF Symbols as vector SVG, vector PDF, or PNG"
   homepage "https://github.com/yapstudios/sfsym"
-  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "a98fc9a44cc53404b2d463b8aae681c2985ba3763340cc3bb5317bf431fe451b"
+  url "https://github.com/yapstudios/sfsym/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "71530fa132069633ee25733931f644046d9e315157636d3c536344258d699078"
   license "MIT"
 
   depends_on xcode: ["15.0", :build]
