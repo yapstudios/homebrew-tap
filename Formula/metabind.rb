@@ -1,16 +1,16 @@
 class Metabind < Formula
   desc "Metabind CLI — agent-first primitive surface for building and shipping MCP apps"
   homepage "https://github.com/yapstudios/metabind-cli"
-  version "0.6.15"
+  version "0.6.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.6.15/metabind-darwin-arm64.tar.gz"
-      sha256 "f0bb10170d5a9971a7f5bd147a300413c1fbe91f6e05f49fb61c099166d7ec8c"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.6.16/metabind-darwin-arm64.tar.gz"
+      sha256 "73387fba5b1b8b4a1d6f37c1d85b287a98682e2bff6e7e48d55ed555613c26c2"
     else
-      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.6.15/metabind-darwin-x64.tar.gz"
-      sha256 "8861b04614f52c623d3f0dc688653af72604e74dbecc7dc6967601033f48bf75"
+      url "https://github.com/yapstudios/homebrew-tap/releases/download/v0.6.16/metabind-darwin-x64.tar.gz"
+      sha256 "87ad344bae9d758ea4c0ed6577e23c89843412e855668a79253f3201b3020a55"
     end
   end
 
@@ -23,6 +23,6 @@ class Metabind < Formula
   end
 
   test do
-    assert_match "0.6.15", shell_output("#{bin}/metabind --version")
+    assert_match "0.6.16", shell_output("#{bin}/metabind --version")
   end
 end
